@@ -4,6 +4,10 @@
 .bgColor{
     background-color: #FD8F5F;
 }
+.bgColor:hover{
+    background-color: #FD8F5F;
+
+}
 a{
     text-decoration:none !important;
 }
@@ -13,4 +17,8 @@ a{
     background-repeat: no-repeat;
     background-position: center center;
     background-image:url(https://preview.colorlib.com/theme/furn/assets/img/hero/xh1_hero.png.pagespeed.ic.b7KEF8LTVj.jpg);
+}
+
+.btnLogin{
+
 }

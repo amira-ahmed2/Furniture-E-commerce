@@ -2,7 +2,7 @@ import { PRODUCTS_ACTIONS_TYPE } from './../actions/productsAction';
 
 const INITIAL_STATE ={
     products:[],
-    singleProduct:[]
+    // singleProduct:[]
 }
 
 export const productsReducer = (state=INITIAL_STATE,action)=>{
@@ -13,12 +13,12 @@ export const productsReducer = (state=INITIAL_STATE,action)=>{
                 products:[...action.payload]
             }
         }
-        case PRODUCTS_ACTIONS_TYPE.GET_SINGLE_PRODUCT:{
-            return{
-                ...state,
-                singleProduct:[{...action.payload}]
-            }
-        }
+        // case PRODUCTS_ACTIONS_TYPE.GET_SINGLE_PRODUCT:{
+        //     return{
+        //         ...state,
+        //         singleProduct:[{...action.payload}]
+        //     }
+        // }
         default:{
             return{
                 ...state

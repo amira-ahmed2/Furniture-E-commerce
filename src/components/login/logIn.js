@@ -79,7 +79,7 @@ function LogIn() {
                       <div>
                         <button
                           type="button"
-                          className="btn bgColor rounded-0 text-white px-5 py-3"
+                          className="btn bgColor  rounded-0 text-white px-5 py-3"
                         >
                           Log in
                         </button>

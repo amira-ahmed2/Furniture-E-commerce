@@ -16,13 +16,13 @@ function Products() {
 //     useEffect(() => {
 //       dispatch (getProductsService())
 //     },[]);
- 
+
 
     return ( <>
     <div className='d-flex flex-column'>
         
         <div className=' order-0 position-relative mb-5'>
-        <div className="col-11  h-100 bgColor position-static top-0 start-0">
+        <div className="col-11  h-100 bgColor2 position-static top-0 start-0">
         </div>
         <div className="col-11 position-absolute top-0 end-0  ">
             <img  src="/assets/images/xh2_hero1.png.pagespeed.ic.R1s5jToz4V.png" className='' alt="" height={'300px'} width={'100%'}/>

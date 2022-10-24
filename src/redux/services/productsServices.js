@@ -19,7 +19,7 @@ export const getSingleProductService =(id)=> async(dispatch)=>{
 
     try{
         const responseS= await AxiosInstance.get('/products/'+id)
-        console.log(responseS.data)
+        // console.log(responseS.data)
         // res.data.products.id
         dispatch(getSingleProductAction(responseS.data));
     }catch(error){
