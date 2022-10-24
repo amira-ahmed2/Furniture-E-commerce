@@ -1,29 +1,13 @@
-import * as React from "react";
-
+import { useForm } from "react-hook-form";
+import  React from "react";
 import "../login/login.css";
+
 function SignUp() {
-  //   const [values, setValues] = React.useState({
-  //     amount: "",
-  //     password: "",
-  //     weight: "",
-  //     weightRange: "",
-  //     showPassword: false,
-  //   });
+  const { register,reset,error ,handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
+   
 
-  //   const handleChange = (prop) => (event) => {
-  //     setValues({ ...values, [prop]: event.target.value });
-  //   };
-
-  //   const handleClickShowPassword = () => {
-  //     setValues({
-  //       ...values,
-  //       showPassword: !values.showPassword,
-  //     });
-  //   };
-
-  //   const handleMouseDownPassword = (event) => {
-  //     event.preventDefault();
-  //   };
+  
   return (
     <>
       <div className=" loginBg">
@@ -38,10 +22,10 @@ function SignUp() {
                       Create your account to get full access
                     </p>
                   </header>
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                       <label
-                        for="exampleFormControlInput"
+                        htmlFor="userName"
                         className="form-label h5"
                       >
                         Username{" "}
@@ -49,13 +33,15 @@ function SignUp() {
                       <input
                         type="text"
                         className="form-control rounded-0 p-2"
-                        id="exampleFormControlInput"
+                        id="userName"
                         placeholder="name@example.com"
-                      />
+                        name="username"
+                        {...register("username")} 
+                                              />
                     </div>
                     <div className="mb-3">
                       <label
-                        for="exampleFormControlInput1"
+                        htmlFor="email"
                         className="form-label h5"
                       >
                         Email Address
@@ -63,13 +49,15 @@ function SignUp() {
                       <input
                         type="email"
                         className="form-control rounded-0 p-2"
-                        id="exampleFormControlInput1"
+                        id="email"
                         placeholder="name@example.com"
+                        name="email"
+                        {...register("email")} 
                       />
                     </div>
                     <div className="mb-3">
                       <label
-                        for="exampleFormControlInput1"
+                        htmlFor="password"
                         className="form-label h5"
                       >
                         Password{" "}
@@ -77,12 +65,14 @@ function SignUp() {
                       <input
                         type="password"
                         className="form-control rounded-0 p-2"
-                        id="exampleFormControlInput2"
+                        id="password"
+                        name="password"
+                        {...register("password")} 
                       />
                     </div>
                     <div className="mb-3">
                       <label
-                        for="exampleFormControlInput3"
+                        htmlFor="confirmPassword"
                         className="form-label h5"
                       >
                         Confirm Password
@@ -90,8 +80,10 @@ function SignUp() {
                       <input
                         type="password"
                         className="form-control rounded-0 p-2"
-                        id="exampleFormControlInput3"
-                      />
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        {...register("confirmpassword")} 
+                        />
                     </div>
                     <div className="d-flex flex-row flex-flex-wrap justify-content-between align-items-center mt-5">
                       <div>
@@ -101,7 +93,8 @@ function SignUp() {
                       </div>
                       <div>
                         <button
-                          type="button"
+                          type="submit"
+                          value="submit"
                           className="btn bgColor rounded-0 text-white px-5 py-3"
                         >
                           Sign Up

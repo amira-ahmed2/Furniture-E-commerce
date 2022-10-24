@@ -37,10 +37,10 @@ function Products() {
 
         </div>
 
-<div className='order-1'>
-<h1>POPULAR PRODUCTS
-</h1>
-<p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+<div className='order-1 text-center '>
+<h2 className='fw-bold mb-3'>POPULAR PRODUCTS
+</h2>
+<p className='mb-5 text-center text-black-50 fw-semibold'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra<br/> ornare, eros dolor interdum nulla.
 
 </p>
 <CardProducts/>

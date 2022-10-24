@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 import "./login.css";
 function LogIn() {
@@ -70,8 +71,9 @@ function LogIn() {
                       <div>
                         <small className="opacity-75">
                           Don’t have an account?{" "}
-                          <a href="/SignUp" className="textColor opacity-100">
-                            Sign Up
+
+                          <a  className="textColor opacity-100">
+                           <Link to="/signup"> Sign Up</Link>
                           </a>
                           here
                         </small>

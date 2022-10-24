@@ -8,11 +8,13 @@ function CardProducts() {
  
   const dispatch =useDispatch();
   const products=useSelector((state)=>state.products.products)
+  
       useEffect(() => {
         dispatch (getProductsService())
       },[]);
    
 
+      
   return (
     <>
       <div className="">
